@@ -1,6 +1,6 @@
 # Github Trends
 
-[TODO. There will be project description]
+The script shows to github repositories created in a week with their issues amount.
 
 # Project Goals
 
