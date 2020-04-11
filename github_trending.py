@@ -24,11 +24,12 @@ def get_open_issues_amount(repo_owner, repo_name):
 
 
 if __name__ == '__main__':
-    repos_info = get_trending_repositories(20)
+    top_size = 20
+    repos_info = get_trending_repositories(top_size)
     for repo in repos_info:
-        stars = repo['stargazers_count']
-        owner = repo['owner']['login']
-        name = repo['name']
-        html_url = repo['html_url']
-        open_issues_amount = get_open_issues_amount(owner, name)
-        print(name, stars, open_issues_amount, html_url)
+        repo_stars = repo['stargazers_count']
+        repo_owner = repo['owner']['login']
+        repo_name = repo['name']
+        repo_html_url = repo['html_url']
+        open_issues_amount = get_open_issues_amount(repo_owner, repo_name)
+        print(repo_name, repo_stars, open_issues_amount, repo_html_url)
